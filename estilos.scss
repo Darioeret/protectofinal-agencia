@@ -1,0 +1,329 @@
+// paleta de colores
+$color1:linear-gradient(to left, lightblue, blue);
+$color2:blue;
+// fuentes
+$fuente1:'Oswald', sans-serif;
+$fuente2: Arial, Helvetica, sans-serif;
+$fuente3: Georgia, 'Times New Roman', Times, serif;
+// tamaño de letra
+$letra1:20px;
+$letra2:50px;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=M+PLUS+1+Code:wght@300&family=Oswald&family=Pushster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: $color1;
+}
+.navbar{
+    border: solid 2px black;
+        .nav-item{
+                padding: 20px;
+                font-family: $fuente1;
+                font-size: 22px;
+                
+        }
+    
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+//****************inicio*****************
+
+
+@mixin tamañoTituloprincipal ($color, $transform) {
+    color: $color;
+    transform: $transform;
+
+}
+
+.jumbotron{
+    background-image: url(img/viaje.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: $fuente1;
+    height: 300px;
+    margin: 0;
+    border:solid 2px black ;
+    .tituloPrincipal{
+        @include tamañoTituloprincipal (white, scale(1))
+    }
+
+        .subtituloPrincipal{
+            color: white;
+            font-size: $letra1;
+        }    
+}
+
+
+h2{
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: $letra2;
+    padding: 15px;
+    
+
+}
+h2:hover{
+    color: chocolate;
+
+}
+.text-center::selection{
+    color: blue;
+}
+.text-center::first-letter{
+    color: burlywood;
+    font-size: 40px;
+}
+
+
+
+.nleft{
+height: 500px;
+border:solid 2px black ;
+p{
+    padding: 20px;
+    color: white;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+}
+}
+.nleft p::selection{
+    color: yellow;
+}
+.nleft p::first-letter{
+    color: burlywood;
+    font-size: 25px;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nright{
+height: 500px;
+background-color: lightcyan;
+background-image: url(img/arg-mapa.jpg);
+background-position: center;
+background-size: cover;
+border:solid 2px black ;
+}
+
+// ******************* .   SECCION DESTINOS   ********************
+
+    .carousel-caption{
+        h5{
+            color: red;
+            text-align: center;
+            font-family: $fuente3;
+            font-size: 40px;
+        }
+    }
+    .carousel-caption{
+        p{
+            color: yellow;
+            text-align: center;
+            font-family: $fuente3;
+            font-size: 30px;
+        }
+    }
+        
+        
+    .texto{
+        min-height: min-content;
+        padding: 3vw;
+        overflow: hidden;
+        margin: 0;
+            h2{
+                font-size: 28px;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: $fuente1;
+                color: aqua;
+            }
+    }
+    .texto{
+        p{
+            font-size: 18px;
+            color: aqua;
+        }
+    }
+
+    .acordion{
+        background-color: blue;
+        .card-header{
+            background-color: lightblue;
+            color: black;
+            text-decoration: none;
+        }
+    }
+.imagen2{
+    background-image: url(img/preguntas.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+    
+}
+
+
+    #collapseOne{
+        background-color: white;
+    }
+
+// ******************* .   SECCION CONTACTO   ********************
+.contenedorContacto{
+    background-color: cadetblue;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+    .formulario{
+        padding: 3vw;
+    
+    }
+    .imagen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: chocolate;
+        img{
+            width: 40vw;
+        }
+    }
+}
+
+    //footer//
+
+    footer{
+        margin: 5px;
+        padding: 5px;
+        background-color: $color1;
+        color:black;  
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        align-items:center;
+        text-align: start;
+            h4{
+                text-align: left;
+                font-family: $letra2;
+                font-size: 30px;
+            }
+    }
+h4:hover{
+    color: yellow;
+}
+
+
+    //***********nosotros*************//
+
+.contenedorNosotros{
+
+    .nostexto{
+        border: 2px solid black;
+        h3{ 
+            color: white;
+            text-align: center;
+            font-family: $fuente2;
+            margin: 2px;
+            padding: 5px;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-family: $fuente2;
+            margin: 2px;
+            padding: 5px;
+        }
+
+    }
+
+    .nosimagen{
+        background-image: url(img/nosotros2.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 60vh;
+        width: 100%;
+    }
+}
+
+   //***************paquetes**********//
+
+#galerias .col-lg-4{
+    margin: 0;
+    padding: 25px;
+    p{
+        color: yellow;
+        text-align: center;
+        font-family: $fuente2;
+    }
+    
+}
+
+#galerias img{
+    width: 100%;
+    height: 300px;
+}
+
+#galerias img:hover{
+    border:  5px solid white;
+}
+
+.text-centro{
+                h1{
+                    text-align: center;
+                    color: white;
+                    font-family: $fuente1;
+                }
+                p{
+                    text-align: center;
+                    color: white;
+                    font-family: $fuente1;
+                }
+}
+
+.text-centro h1:hover{
+    color: chocolate;
+}
+.text-centro p:hover{
+    color: chocolate;
+}
+//fin de paquetes//
+
+$redes:(
+    red1: georgia,
+    red2: arial,
+    red3: monospace,
+);
+    
+@each $red, $font in $redes {
+    .btn--#{$red} {
+        background-color: blue;
+        height: 50px; 
+        width: fit-content;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 20px;
+        color:yellow;
+        font-family: $font;
+
+    }
+}
+
+    
+
+

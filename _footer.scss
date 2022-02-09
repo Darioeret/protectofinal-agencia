@@ -1,0 +1,12 @@
+.borderFooter{
+    border: solid 2px black;
+}
+.fcenter{
+    @extend .borderFooter;
+}
+.fleft{
+    @extend .borderFooter;
+}
+.fright{
+    @extend .borderFooter;
+}
